@@ -4,7 +4,7 @@ base: core22
 version: '1.21'
 summary: PgBouncer in a snap.
 description: |
-  TBD
+  Lightweight connection pooler for PostgreSQL
 
 architectures:
   - build-on: [amd64]
