@@ -1,3 +1,4 @@
+# yamllint disable rule:line-length
 name: charmed-pgbonuncer
 base: core22
 version: '1.21'
