@@ -1,5 +1,5 @@
 # yamllint disable rule:line-length
-name: charmed-pgbonuncer
+name: charmed-pgbouncer
 base: core22
 version: '1.21'
 summary: PgBouncer in a snap.
