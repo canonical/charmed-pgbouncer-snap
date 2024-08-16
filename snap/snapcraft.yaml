@@ -80,7 +80,6 @@ parts:
       - util-linux
       - pgbouncer=1.21.0-0ubuntu0.22.04.1~ppa1
       - golang-github-prometheus-community-pgbouncer-exporter=0.7.0-0ubuntu0.22.04.1~ppa1
-      - locales-all
       - postgresql-client-common
       - postgresql-client-14
     organize:
