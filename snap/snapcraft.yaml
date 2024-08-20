@@ -80,14 +80,12 @@ parts:
       - util-linux
       - pgbouncer=1.21.0-0ubuntu0.22.04.1~ppa1
       - golang-github-prometheus-community-pgbouncer-exporter=0.7.0-0ubuntu0.22.04.1~ppa1
-      - locales-all
       - postgresql-client-common
       - postgresql-client-14
     organize:
       usr/share/doc/util-linux/copyright: licenses/COPYRIGHT-util-linux
       usr/share/doc/pgbouncer/copyright: licenses/COPYRIGHT-pgbouncer
       usr/share/doc/golang-github-prometheus-community-pgbouncer-exporter/copyright: licenses/COPYRIGHT-golang-github-prometheus-community-pgbouncer-exporter
-      usr/share/doc/locales-all/copyright: licenses/COPYRIGHT-locales-all
       usr/share/doc/postgresql-client-common/copyright: licenses/COPYRIGHT-postgresql-client-common
       usr/share/doc/postgresql-client-14/copyright: licenses/COPYRIGHT-postgresql-client-14
   snap-license:
