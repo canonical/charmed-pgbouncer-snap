@@ -55,6 +55,7 @@ slots:
         - $SNAP_COMMON/var/log/pgbouncer
   sockets:
     interface: content
+    content: socket-directory
     source:
       write:
         - $SNAP_CURRENT/run
