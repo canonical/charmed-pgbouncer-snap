@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mkdir -p $SNAP_DATA/etc/pgbouncer
+mkdir -p $SNAP_DATA/run/pgbouncer
 
 mkdir -p $SNAP_COMMON/var/log/pgbouncer
 
