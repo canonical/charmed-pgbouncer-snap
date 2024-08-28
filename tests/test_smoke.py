@@ -19,10 +19,6 @@ def test_all_apps():
     with open("snap/snapcraft.yaml") as file:
         snapcraft = yaml.safe_load(file)
 
-        override = {
-            "pgbackrest": "version",
-        }
-
         skip = [
             "pgbouncer-server",
             "prometheus-pgbouncer-exporter",
@@ -31,7 +27,7 @@ def test_all_apps():
         for app, data in snapcraft["apps"].items():
             if not bool(data.get("daemon")) and app not in skip:
                 subprocess.run(
-                    f"{snapcraft['name']}.{app} {override.get(app, '--help')}".split(),
+                    f"{snapcraft['name']}.{app} --help".split(),
                     check=True,
                 )
 
@@ -57,3 +53,11 @@ def test_all_services():
                 subprocess.run(f"sudo snap stop {snapcraft['name']}.{app}".split())
 
                 assert "active" in str(service.stdout)
+
+@pytest.mark.run(after="test_install")
+def test_version():
+    with open("snap/snapcraft.yaml") as file:
+        snapcraft = yaml.safe_load(file)
+        snap_version = snapcraft['version']
+        app_version = ".".join(subprocess.check_output([f"{snapcraft['name']}.pgbouncer", "--version"]).decode().split()[1].split(".")[:-1])
+        assert snap_version == app_version
