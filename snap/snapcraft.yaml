@@ -14,6 +14,10 @@ architectures:
 grade: stable
 confinement: strict
 
+plugs:
+  shared-memory:
+    private: true
+
 system-usernames:
   snap_daemon: shared
 
