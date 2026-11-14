@@ -26,6 +26,8 @@ package-repositories:
     ppa: data-platform/pgbouncer
   - type: apt
     ppa: data-platform/pgbouncer-exporter
+  - type: apt
+    ppa: canonical-server/postgresql-sru-preparation
 
 layout:
   /usr/lib/python3/dist-packages:
